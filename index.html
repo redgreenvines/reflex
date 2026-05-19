@@ -39,7 +39,7 @@
 
   <body onload="doBodyLoad();">
     <div class="page">
-      version 1.096 - may 16 2026  -  5000 branches per Pyramidal Neuron
+      version 1.097 - may 16 2026  -  5000 branches per Pyramidal Neuron
       <main>
         <div id="leftside" >  
           <span id="OpticSpeedLayers">Visual High Speed Cortex Preprocess</span>
@@ -670,6 +670,7 @@
             if(pyramidalNeurons[id].branches[j].cNeuronId!=-1){
               if(corticalNeurons[ [pyramidalNeurons[id].branches[j].cNeuronId] ].active &&
                   pyramidalNeurons[id].active ){
+                corticalCtx.lineWidth = 5;
                 corticalCtx.beginPath();
                 if(!altcol){corticalCtx.strokeStyle = 'rgba(0,150,255,0.25)';}
                 else{corticalCtx.strokeStyle = 'rgba(50,255,200,0.25)';}
