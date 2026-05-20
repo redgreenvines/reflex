@@ -12,19 +12,20 @@
           body { width: 100%;height: 100%;}
           .page {  width: 95%;  height: 95%;  
             font-family: Arial,Helvetica,sans-serif;  background-color: #ffffff;  top: 0px;  left: 0px;  position: absolute;}
-          #leftside{position: absolute;left: 25px; top: 25px;}
-          #rightside{position: absolute;left: 650px;top: 25px; margin-left: 10px; width: 600px; }
+          #leftside{position: absolute;left: 25px; top: 25px;height:95% ;}
+          #rightside{position: absolute;left: 650px;top: 25px; margin-left: 10px; width: 600px; height:95% ;}
           #info{position: absolute;left: 25px; top: 1150px; width:95%;margin:10px;}
           .enhance{background: yellow;}
           .ftbox{width:50px; float:left;}
           #messageArea{position: absolute;left: 10px; top: 250px; width:95%;margin:10px;}
+          #exampleArea{left: 10px; top: 450px; width:95%;margin:10px;}
           #imageToSense{ width:300px; position:absolute; left:25px;top:25px;}          
           #imageToSenseMask{ width:300px; position:absolute; left:25px;top:25px; z-index: 50;opacity: 50%;}
           #OpticSpeedLayers{ width:300px; position:absolute; left:25px;top:5px;}
           #corticalCanvas{ width:300px; position:absolute; left:325px;top:25px;z-index: 1;}
           #AssociativeLayers{ width:300px; position:absolute; left:325px;top:5px;}
           #processCanvas{width:300px; position:absolute; left:325px;top:25px;z-index: 5; opacity: 100%;display:none;}
-          #description{float:left;width:95%;margin:14px;height:100px;}
+          #description{float:left;width:95%;margin:14px;height:100%;}
           #dash{left: 50px; top:490px; position: absolute;  height:80px;} 
           #under_input{position: absolute;left: 50px; top: 360px; width:300px;height:20px;z-index: 20;display:none;}
           #under_Cortex{position: absolute;left: 350px; top: 360px; width:300px;height:20px;z-index: 20;display:none;}
@@ -59,10 +60,19 @@
             You can change the sensory input to any image in the row of images below the simulation. Short Term memory settings affect image overlapping from other test images. 
             Click inside Associative Cortex area to see active pyramidal axon branches coming <B>to</B> a (yellow) active neuron, or branches emerging <B>from</B> an activated pyramidal neuron (hidden among dense groups of neurons).   
             Global Variables (like the size of the test sample) can be edited below, including the preprocess matrix which affects images as they load. 
-          </div>
-          <div id="messageArea">
-            <h2 id="mess" >hi</h2>
-          </div>
+            <div id="messageArea">
+              <h2 id="mess" >hi</h2> 
+              <div id="exampleArea">
+                 This revision reveals progressive or ramified Pyramidal Axon Branch activation of cortical neurons from columns [u]outside the sample area[/u] but activated by perception in response to the sample and supported by extending the Cortical-Thalamic perception sequence length. 
+                 <img src="rightclick.png" width="99%"/>
+              </div>
+            </div>
+
+          </div>      
+        
+        </div>
+
+
           <div id="challenge">
             <h2 style="background-color: yellow; display:none;">The Challenge is to find where to click (sample) the left side image to produce the clearest image in the right side, and explain how you find the best sample for each of these 8 images - write me and I may send you a prize!</h2>
           </div>
