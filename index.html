@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <title>Associative Engram Process Example </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="Description" content="Consciousness, progressive perception, and associative memory modelling." />
-    <meta name="Keywords" content="associative brain wiring, memory, engrams, perception, association" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Description" content="Consciousness, progressive perception, and associative memory modelling.">
+    <meta name="Keywords" content="associative brain wiring, memory, engrams, perception, association">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <style type="text/css">   
           body { width: 100%;height: 100%;}
           .page {  width: 95%;  height: 95%;  
@@ -40,29 +39,28 @@
 
   <body onload="doBodyLoad();">
     <div class="page">
-      version 1.0974 - sept 14 2026  -  loads image from disk
+      version 1.0975 - nov 18 2026  -  including Sudly's animation
       <main>
-        <div id="leftside" >  
+        <div id="leftside">  
           <span id="OpticSpeedLayers">Visual High Speed Cortex Preprocess</span>
           <span id="AssociativeLayers">Associative Cortex 6-12 hz Mem+Percep</span>   
           <canvas id="imageToSense" width="300" height="300"></canvas>          
-          <canvas id="imageToSenseMask" width="300" height="300"></canvas> 
+          <canvas id="imageToSenseMask" width="300" height="300" style="display: block;"></canvas> 
           <canvas id="corticalCanvas" width="300" height="300"></canvas> 
           <canvas id="processCanvas" width="300" height="300"></canvas>
         </div>
         <div id="rightside">
           
-          <br/>
+          <br>
           <div id="description">
             A simulation of an image being preprocessed and then sensed, retained, and perceived 
             in a synchronous neural association network. 
             You can initiate perception from a square sample by clicking in the left Cortex Preprocess area. 
             You can change the sensory input to any image in the row of images below the simulation. Short Term memory settings affect image overlapping from other test images. 
-            Click inside Associative Cortex area to see active pyramidal axon branches coming <B>to</B> a (yellow) active neuron, or branches emerging <B>from</B> an activated pyramidal neuron (hidden among dense groups of neurons).   
+            Click inside Associative Cortex area to see active pyramidal axon branches coming <b>to</b> a (yellow) active neuron, or branches emerging <b>from</b> an activated pyramidal neuron (hidden among dense groups of neurons).   
             Global Variables (like the size of the test sample) can be edited below, including the preprocess matrix which affects images as they load. 
          		<!-- Victor Senkevich's x-domain image load code : my injection start :) -->
-			<img id="userImage" src="clickhere.jpg" title="Click here to upload your image" 
-        onclick="document.querySelector('#getUserFile').click()" style="height: 56px;display: block;border: 4px solid darkorange;">
+			<img id="userImage" src="clickhere.jpg" title="Click here to upload your image" onclick="document.querySelector('#getUserFile').click()" style="height: 56px;display: block;border: 4px solid darkorange;">
       <input type="file" accept=".*" style="display:none;" id="getUserFile" onchange="
                 if (this.files.length == 0) {
                     console.log('*** NO user file...');
@@ -96,10 +94,10 @@
 		<!-- Victor Senkevich's xdomain code injection end :) -->
 
             <div id="messageArea">
-              <h2 id="mess" >hi</h2> 
+              <h2 id="mess">The activated neurons are shown in yellow, where 11 or more spines were activated. This sample reactivates 17481 neurons or 100% gross perceptive reflex reactivation *- sample is set to 25% of the full image area</h2> 
               <div id="exampleArea">
-                 This revision reveals progressive or ramified Pyramidal Axon Branch activation of cortical neurons from columns <u>outside the sample area</u> but activated by perception in response to the sample and supported by extending the Cortical-Thalamic perception sequence length. 
-                 <img src="rightclick.png" width="99%"/>
+                 A colleague by name of Sudly has been studying this interpretation of associative memory formation and reflexive perception (aka Familiarity) and he kindly provided an animation from an app he created demonstrating what this looks like more or less in the 3-d shape of a brain - the illustration includes thalamic structures in lavender and yellow flashes for cortical neuron activation and dendritic back propagation, with subsequent proximal branched pyramidal axons sending signals to remote cortical neurons and reactivating them when spines are present and quorum is achieved.<br><br>
+                 <img src="sudly.gif" width="99%">
               </div>
             </div>
 
@@ -111,11 +109,11 @@
           <div id="challenge">
             <h2 style="background-color: yellow; display:none;">The Challenge is to find where to click (sample) the left side image to produce the clearest image in the right side, and explain how you find the best sample for each of these 8 images - write me and I may send you a prize!</h2>
           </div>
-        </div>
+        </main></div>
         <div id="dash">
           
           <table width="600">
-            <tr bgcolor="#eee">
+            <tbody><tr bgcolor="#eee">
               <td>
                 <b>General Note about changing images: </b>If you change images faster than the short term memory effect (default 3000 milliseconds), then expect some of the previous image to be recognized as well.
                 Or use the local file load option to load image files and see how they work.
@@ -124,49 +122,44 @@
                   Top Down ON resumes perception">Turn Top Down OFF</button>
                   Note: only turn off to learn clean (a hypothalamic effect) Focus or Attention suppressing Perception.
                 </div>
-              </td><td width="120px" >
-                <input id="testXPos" value="0" title="X position of test" class="ftbox" /> <input id="testYPos" value="0"  title="y position of test" class="ftbox"/>
-                <span id="actionOutput" title="current test parameters"></span><br/><button class="enhance" title="Simulate Last Click Position " 
-                onclick="repeatlastTestPosition();">RETEST</button>
-                <button title="Highlight Last Clicked Sample " 
-                onclick="repeatlastTestPositionOnly();">REPOS</button></td>
+              </td><td width="120px">
+                <input id="testXPos" value="0" title="X position of test" class="ftbox"> <input id="testYPos" value="0" title="y position of test" class="ftbox">
+                <span id="actionOutput" title="current test parameters"></span><br><button class="enhance" title="Simulate Last Click Position " onclick="repeatlastTestPosition();">RETEST</button>
+                <button title="Highlight Last Clicked Sample " onclick="repeatlastTestPositionOnly();">REPOS</button></td>
             </tr>
-            <tr >
-              <td><button id="changeSTM" onclick="changeShortTermMemory();" 
-                title="for 1 minute enter 60000 which is in milliseconds. If you change sample images before ths time, perception will pick up the previous image pattern as well as the current ">Change Short Term memory potentiation</button><br/>
+            <tr>
+              <td><button id="changeSTM" onclick="changeShortTermMemory();" title="for 1 minute enter 60000 which is in milliseconds. If you change sample images before ths time, perception will pick up the previous image pattern as well as the current ">Change Short Term memory potentiation</button><br>
                 Note: any recent images should be more accessible than those that have faded into completely inactive memory. In real life it is about 5 minutes.
-              </td><td><span id="stmemory" onclick="changeShortTermMemory();" title="if you use a very small number the effect will be minimal">10000</span></td>
+              </td><td><span id="stmemory" onclick="changeShortTermMemory();" title="if you use a very small number the effect will be minimal">3000</span></td>
             </tr>
             <tr bgcolor="#eee">
-              <td><button id="changeSTM" class="enhance" onclick="changeTestSize();" 
-                title="a test size of 150 will certainly reveal much of the associated memory, while a small sample like 50 will show which parts of the image sample have a critical arrangement. Use the split to get a separated sample with a gap in between">Change Test Size Pixel Width and Height</button>  <input type="checkbox" id="useComb"/> <label for="useComb" class="enhance">Split Sample</label><br/>
+              <td><button id="changeSTM" class="enhance" onclick="changeTestSize();" title="a test size of 150 will certainly reveal much of the associated memory, while a small sample like 50 will show which parts of the image sample have a critical arrangement. Use the split to get a separated sample with a gap in between">Change Test Size Pixel Width and Height</button>  <input type="checkbox" id="useComb"> <label for="useComb" class="enhance">Split Sample</label><br>
                 Note: the test size is a square of so many pixels, 150 is default which is half of the width and height of the image
               </td><td class="enhance"><span id="testSize" onclick="changeTestSize();" title="the smaller this sample square is, the more amazing the perceptual results of holographic memory can be, but also too small a sample may not be enough to recall any associated memory - splitting the sample can be interesting">150</span></td>
             </tr>
             <tr>
-              <td> <button id="changePerceptionRequired"  onclick="changePerceptionRequired();"
-                title="A Cortical Neuron that needs many synchronous mini synapse activations is less likely to re-activate randomly by mistake, but more likely to re-activate with the same associated neurons that fired when this neuron was originally activated.">Change Number of Branches Required for Perception</button><br/>
-              Note: Reactivation threshold for resting Neurons <br/>
-              eg. the number of (ARC protein) connected synchronous spine activations neccessary to re-activate a resting neuron -<br/>
+              <td> <button id="changePerceptionRequired" onclick="changePerceptionRequired();" title="A Cortical Neuron that needs many synchronous mini synapse activations is less likely to re-activate randomly by mistake, but more likely to re-activate with the same associated neurons that fired when this neuron was originally activated.">Change Number of Branches Required for Perception</button><br>
+              Note: Reactivation threshold for resting Neurons <br>
+              eg. the number of (ARC protein) connected synchronous spine activations neccessary to re-activate a resting neuron -<br>
               the higher this number, the fewer original associated neurons in the memory engram will be reactivated from a sample.
             </td><td><span id="PerceptionRequired" onclick="changePerceptionRequired();" title="Perception of original associated neurons requires a minimum of this many pyramidal spines - i.e. neural branch connections per cortical neuron.">11</span></td>
             </tr> 
             <tr bgcolor="#eee">
-              <td><button id="changeSequenceLength" onclick="changeSequenceLength();" title="Progressive Perception occurs in steps, and more steps reveal more of the holographic associated memory engram from a small sample stimulus. Too many steps create noise, enlisting too many pyramidal branches by the expansion of field interference.">Change perception Sequence length</button><br/>
-              Note: Number of Thalamo-Cortical Feedback loop cycles <br/>
+              <td><button id="changeSequenceLength" onclick="changeSequenceLength();" title="Progressive Perception occurs in steps, and more steps reveal more of the holographic associated memory engram from a small sample stimulus. Too many steps create noise, enlisting too many pyramidal branches by the expansion of field interference.">Change perception Sequence length</button><br>
+              Note: Number of Thalamo-Cortical Feedback loop cycles <br>
               more cycles enable more progressive neural reactivations for a more complete perception.
-            </td><td><span id="SequenceLength" onclick="changeSequenceLength();" title="Note how this expands the field interference recruiting more Pyramidal activation, to enhance memory association.">5</span></td>
+            </td><td><span id="SequenceLength" onclick="changeSequenceLength();" title="Note how this expands the field interference recruiting more Pyramidal activation, to enhance memory association.">3</span></td>
             </tr>
             <tr>
-              <td> <button id="changeRadiusLength" onclick="changeRadiusLength();" title="this affects the circular field size which is multiplied per cycle">Change Radius length</button><br/>
+              <td> <button id="changeRadiusLength" onclick="changeRadiusLength();" title="this affects the circular field size which is multiplied per cycle">Change Radius length</button><br>
               Note: this affects the ephaptic field ring extent which is an unresolved biological constant in the 1/10th of a second time frame.   
               Adjust this only once at the beginning of a session (page redisplay) - 
               the positions of circular interference will change some of the synchronously firing  
               pyramidal neurons that are involved in an associated memory engram.
-              </td><td><span id="RadiusLength"  onclick="changeRadiusLength();" title="Affects fundamental field ring size.">30</span></td>
+              </td><td><span id="RadiusLength" onclick="changeRadiusLength();" title="Affects fundamental field ring size.">13</span></td>
             </tr>
            <tr bgcolor="#eee">
-              <td> <button id="changeGreyThresh" onclick="changeGreyTreshold();" title="This relates to the photography 18% percent grey midpoint cutoff which we are using to generate black and white processed images.">Change Grey Treshold Prep</button><br/>
+              <td> <button id="changeGreyThresh" onclick="changeGreyTreshold();" title="This relates to the photography 18% percent grey midpoint cutoff which we are using to generate black and white processed images.">Change Grey Treshold Prep</button><br>
               Note: the original greyscale is inverted as to negative grayscale image, this preprocess is applied 
               to create a black and white version - anything darker than this threashold out of 255 is black and vice versa, note % grey has a logrhythmic character.</td><td>
                 <span id="whiteBlackGreyTreshold" onclick="changeGreyTreshold();" title="keep below 255 and above zero">50</span></td>
@@ -175,44 +168,44 @@
             <td colspan="2">
               Preprocessing Matrix mask - click to change individual matrix cells - we are using this to remove large color filled areas 
               - values can be '-1' '0' or '1':
-              <table id="matrixTable" ><tr><td id="mask00" onclick="editMatrixTable00();">0</td><td id="mask01" onclick="editMatrixTable01();">-1</td><td id="mask02" onclick="editMatrixTable02();">-1</td></tr>
+              <table id="matrixTable"><tbody><tr><td id="mask00" onclick="editMatrixTable00();">0</td><td id="mask01" onclick="editMatrixTable01();">-1</td><td id="mask02" onclick="editMatrixTable02();">-1</td></tr>
                 <tr><td id="mask10" onclick="editMatrixTable10();">0</td><td id="mask11" onclick="editMatrixTable11();">0</td><td id="mask12" onclick="editMatrixTable12();">0</td></tr>
                 <tr><td id="mask20" onclick="editMatrixTable20();">1</td><td id="mask21" onclick="editMatrixTable21();">1</td><td id="mask22" onclick="editMatrixTable22();">0</td></tr>
-              </table>
+              </tbody></table>
             </td>
           </tr>
-        </table><br/><br/><br/><br/><br/><br/>
-        Other Global Variables should be changed only at the code level as they affect the amount of memory the page requires,<br/>
-        such as the number of branches capable of linking Cortical neurons per Pyramidal neuron (5000 in this version),<br/>
-        and the ratio of branching Pyramidal Neurons embedded in the Cortical Neuron Population (1 P per 5 C in this version).<br/>
-        Based upon 300x300 cortical neurons = 90,000 there are 18,000 pyramidals with 36,864,000 total connections in this demo<br/><br/>
-        <br/><br/><br/>
+        </tbody></table><br><br><br><br><br><br>
+        Other Global Variables should be changed only at the code level as they affect the amount of memory the page requires,<br>
+        such as the number of branches capable of linking Cortical neurons per Pyramidal neuron (5000 in this version),<br>
+        and the ratio of branching Pyramidal Neurons embedded in the Cortical Neuron Population (1 P per 5 C in this version).<br>
+        Based upon 300x300 cortical neurons = 90,000 there are 18,000 pyramidals with 36,864,000 total connections in this demo<br><br>
+        <br><br><br>
         This demo implements hypothalamic suppression modelling during image selection which suppresses *TOPDOWN* current active mental events (i.e. the perceptive reflex content) and enables more refined subsequent focussed recognition. (Focussing involves suppression of reflex perception).
-        <br/><br/>
+        <br><br>
         
-         <br/><br/><br/>
+         <br><br><br>
          (*) % gross perceptive reflex reactivation is a number that compares the active neuron count after perception with the active neuron count when the image is first encountered, it is not a figure related to pattern correspondence - merely a gross activation figure.  Additional activation will occur after learning several images and will be visible as screen hash, or dust in the background - indicative of cortical neurons of other engrams which share the same ARC protein spines.
-         <br/><br/><br/><br/><br/><br/>
-        copyright © redgreenvines 2022, 2023, 2024, 2025, 2026<br/>
+         <br><br><br><br><br><br>
+        copyright © redgreenvines 2022, 2023, 2024, 2025, 2026<br>
         
         </div>        
-        <div id="under_input" class="enhance">
+        <div id="under_input" class="enhance" style="display: block;">
           <b>Click above to select and test sample</b>
         </div>       
-        <button id="under_Cortex" title="Click this button to toggle the direction of branches revealed by clicking above">
+        <button id="under_Cortex" title="Click this button to toggle the direction of branches revealed by clicking above" style="display: block;">
           Click above for Pyramidal branches from 
         </button>
-        <div id="imgSelector" >
-          <img src="images.png"/> <table><tr><td id="samp1" width=66px height=3px></td><td id="samp2" width=66px height=3px></td><td id="samp3" width=66px height=3px></td><td id="samp4" width=66px height=3px bgcolor="teal"></td><td id="samp5"  width=66px height=3px></td><td id="samp6" width=66px height=3px></td><td width=66px height=3px id="samp7" ></td><td width=66px height=3px id="samp8" ></td></tr></table>
+        <div id="imgSelector" style="display: block;">
+          <img src="images.png"> <table><tbody><tr><td id="samp1" width="66px" height="3px"></td><td id="samp2" width="66px" height="3px"></td><td id="samp3" width="66px" height="3px"></td><td id="samp4" width="66px" height="3px" bgcolor="teal"></td><td id="samp5" width="66px" height="3px"></td><td id="samp6" width="66px" height="3px"></td><td width="66px" height="3px" id="samp7"></td><td width="66px" height="3px" id="samp8"></td></tr></tbody></table>
         </div>
-        <table id="imgDescriptor"><tr><td id="desc_0"class="isam"></td><td id="desc_1" class="isam"></td><td id="desc_2" class="isam"></td><td id="desc_3" class="isam"></td><td id="desc_4" class="isam"></td><td id="desc_5"class="isam"></td><td id="desc_6"class="isam"></td><td id="desc_7"class="isam"></td></tr></table>
+        <table id="imgDescriptor"><tbody><tr><td id="desc_0" class="isam"></td><td id="desc_1" class="isam"></td><td id="desc_2" class="isam"></td><td id="desc_3" class="isam">17481</td><td id="desc_4" class="isam"></td><td id="desc_5" class="isam"></td><td id="desc_6" class="isam"></td><td id="desc_7" class="isam"></td></tr></tbody></table>
         <div id="hidefieldcon">
-          <button id="hideFields" title="This button displays the field interference overlay. " onclick="hideFields();">Show fields</button><br/>
+          <button id="hideFields" title="This button displays the field interference overlay. " onclick="hideFields();">Show fields</button><br>
  
           <button id="skipFields" title="If you skip fields the progressive perception is not as good." onclick="skipFields();">Skip fields</button> 
         </div>
-      </main>
-    </div>
+      
+    
     <script type="text/javascript">
       
     
@@ -1575,5 +1568,6 @@
 
     </script>
      
-  </body>
-</html>
+  
+
+</body></html>
